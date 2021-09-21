@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Music</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="#"
+          ><div class="logo gradient-text">
+            <i class="fas fa-headphones"></i></div
+        ></a>
+        <div><span>Favourites</span></div>
+      </div>
+
+      <div class="nav-right">
+        <input type="text" placeholder="Search" />
+        <i class="fas fa-bell mx-2"></i>
+        <img src="./images/profile.jpg" alt="" />
+      </div>
+    </nav>
+    <div class="container">
+      <main>
+        <section id="carousal">
+          <input type="radio" name="slider" id="s1" checked />
+          <input type="radio" name="slider" id="s2" />
+          <input type="radio" name="slider" id="s3" />
+          <input type="radio" name="slider" id="s4" />
+          <input type="radio" name="slider" id="s5" />
+
+          <label for="s1" id="slide1">
+            <div class="carousal-image">
+              <img src="./images/concert.jpg" width="100%" alt="" />
+            </div>
+          </label>
+          <label for="s2" id="slide2">
+            <div class="carousal-image">
+              <img src="./images/concert-2.jpg" width="100%" alt="" />
+            </div>
+          </label>
+          <label for="s3" id="slide3">
+            <div class="carousal-image">
+              <img src="./images/drums.jpg" width="100%" alt="" />
+            </div>
+          </label>
+        </section>
+        <section class="latest-releases">
+          <h3>Latest Releases</h3>
+          <div class="song-card">
+            <div class="play-hover-effect-container">
+              <img src="./images/Stay.png" height="100px" alt="" />
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="song-info">
+              <h4>Stay</h4>
+              <p>Aug 11, 2021</p>
+            </div>
+          </div>
+          <div class="song-card">
+            <div class="play-hover-effect-container">
+              <img src="./images/flames.png" height="100px" alt="" />
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="song-info">
+              <h4>Flames</h4>
+              <p>Aug 21, 2021</p>
+            </div>
+          </div>
+          <div class="song-card">
+            <div class="play-hover-effect-container">
+              <img src="./images/summerwave.jpg" height="100px" alt="" />
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="song-info">
+              <h4>Summer Wave</h4>
+              <p>Sep 11, 2020</p>
+            </div>
+          </div>
+          <div class="song-card">
+            <div class="play-hover-effect-container">
+              <img src="./images/noor.jpg" height="100px" alt="" />
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="song-info">
+              <h4>Noor</h4>
+              <p>Apr 11, 2021</p>
+            </div>
+          </div>
+        </section>
+        <section id="popular-artists">
+          <h3>Popular Artists</h3>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/martin.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Martin Garrix</figcaption>
+          </figure>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/ritviz.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Ritviz</figcaption>
+          </figure>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/ariana.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Ariana Grande</figcaption>
+          </figure>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/ed sheeran.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Ed Sheeran</figcaption>
+          </figure>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/drake.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Drake</figcaption>
+          </figure>
+          <figure>
+            <a href="#single">
+              <div class="circular">
+                <img src="./images/bruno mars.jpg" alt="" width="100%" />
+              </div>
+            </a>
+            <figcaption class="text-center">Bruno Mars</figcaption>
+          </figure>
+        </section>
+
+        <section id="stations">
+          <figure>
+            <div class="circular">
+              <img src="./images/workout.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Workout</figcaption>
+          </figure>
+          <figure>
+            <div class="circular">
+              <img src="./images/rock.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Rock</figcaption>
+          </figure>
+          <figure>
+            <div class="circular">
+              <img src="./images/pop.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Pop</figcaption>
+          </figure>
+          <figure>
+            <div class="circular">
+              <img src="./images/retro.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Retro</figcaption>
+          </figure>
+          <figure>
+            <div class="circular">
+              <img src="./images/chill.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Chill</figcaption>
+          </figure>
+          <figure>
+            <div class="circular">
+              <img src="./images/love.jpg" alt="" width="100%" />
+            </div>
+            <figcaption class="position-element-center">Love</figcaption>
+          </figure>
+        </section>
+        <section id="genre">
+          <div class="genre-image">
+            <img src="./images/party.jpg" width="100%" alt="" />
+            <span class="genre-text">Party</span>
+          </div>
+          <div class="genre-image">
+            <img src="./images/electronic.jpg" width="100%" alt="" />
+            <span class="genre-text">Electronics</span>
+          </div>
+          <div class="genre-image">
+            <img src="./images/road-trip.jpg" width="100%" alt="" />
+            <span class="genre-text">Road Trip</span>
+          </div>
+        </section>
+        <section class="latest-song-section">
+          <h3>Latest English</h3>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/falling.png" alt="" width="100%" />
+              <figcaption>Falling</figcaption>
+            </figure>
+            <div>Aug 11, 2020</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/dance monkey.jpg" alt="" width="100%" />
+              <figcaption>Dance Monkey</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/play date.jpg" alt="" width="100%" />
+              <figcaption>Play Date</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/Blinding lights.jpg" alt="" width="100%" />
+              <figcaption>Blinding Lights</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/CWKF.jpg" alt="" width="100%" />
+              <figcaption>Can We Kiss Forever?</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/Cono.png" alt="" width="100%" />
+              <figcaption>Cono</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+        </section>
+        <section class="latest-song-section">
+          <h3>Latest Hindi</h3>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/baarish.jpeg" alt="" width="100%" />
+              <figcaption>Baarish</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img
+                src="./images/giveme some sunshine.jpg"
+                alt=""
+                width="100%"
+              />
+              <figcaption>Give me some Sunshine</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/tere sang yara.jpg" alt="" width="100%" />
+              <figcaption>Tere Sang Yaara</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/galiyaan.jpg" alt="" width="100%" />
+              <figcaption>Galiyan</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/kaun tujhe.jpg" alt="" width="100%" />
+              <figcaption>Kaun Tujhe</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+          <div class="latest-song">
+            <figure>
+              <img src="./images/tera ban jaunga.jpg" alt="" width="100%" />
+              <figcaption>tera Ban Jaunga</figcaption>
+            </figure>
+            <div>Aug 11, 2017</div>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <h3>Queue</h3>
+        <div class="queue-songs-list">
+          <div class="queue-song">
+            <img src="./images/summerwave.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Summer Wave</span>
+              <span>Solven, Hysaze</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="queue-song">
+            <img src="./images/dance monkey.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Dance Monkey</span>
+              <span>Tones and I</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="queue-song">
+            <img src="./images/summerwave.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Summer Wave</span>
+              <span>Solven, Hysaze</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="queue-song">
+            <img src="./images/summerwave.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Summer Wave</span>
+              <span>Solven, Hysaze</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="queue-song">
+            <img src="./images/summerwave.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Summer Wave</span>
+              <span>Solven, Hysaze</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="queue-song">
+            <img src="./images/summerwave.jpg" height="90%" alt="" />
+            <div class="queue-song-info">
+              <span>Summer Wave</span>
+              <span>Solven, Hysaze</span>
+            </div>
+            <span><i class="far fa-heart"></i></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer>
+      <div class="playing-song-info">
+        <img src="./images/play date.jpg" height="100%" alt="album art" />
+        <div class="singer-name">
+          <p>Play Date</p>
+          <p>Melanie Martinez</p>
+        </div>
+        <i class="far fa-heart"></i>
+        <i class="fas fa-ban"></i>
+      </div>
+      <div class="player">
+        <div class="player-controls">
+          <i class="fas fa-random"></i>
+          <i class="fas fa-backward"></i>
+          <i class="far fa-pause-circle"></i>
+          <i class="fas fa-forward"></i>
+          <i class="fas fa-undo-alt"></i>
+        </div>
+        <div class="player-seekbar">
+          <input type="range" class="slider" />
+        </div>
+      </div>
+      <div class="controls">
+        <i class="fas fa-list-ul"></i>
+        <i class="fas fa-laptop"></i>
+        <i class="fas fa-volume-up"></i>
+        <input type="range" class="slider" />
+        <i class="fas fa-expand-alt"></i>
+      </div>
+    </footer>
+  </body>
+</html>
