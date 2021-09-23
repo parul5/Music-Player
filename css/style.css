@@ -5,28 +5,31 @@
   --text-accent: #afafaf;
 }
 
-* {
-  /* border: 1px solid red; */
-}
-
+/* setting background colour and font */
 body {
   background-color: var(--primary-bg);
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* removing scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* styling top navbar */
 nav {
   display: flex;
   justify-content: space-between;
   height: 6vh;
-  /* border: 1px solid red; */
-  padding: 5px;
+  padding: 5px 10px;
   position: sticky;
   z-index: 1;
   top: 0;
   background-color: var(--primary-bg);
 }
 
+/* left part of navigation bar include logo and 'Favourites' text */
 .nav-left {
   display: flex;
   justify-content: flex-start;
@@ -34,11 +37,13 @@ nav {
   align-items: center;
 }
 
+/* Favourites */
 .nav-left div:nth-child(2) {
   padding-left: 20%;
   font-size: 1.3em;
 }
 
+/* Right part of navigation bar includes search, bell icon and profile */
 .nav-right {
   display: flex;
   justify-content: flex-end;
@@ -46,10 +51,12 @@ nav {
   width: 40%;
 }
 
+/* class to give horizontal margin */
 .mx-2 {
   margin: 0 1.5rem;
 }
 
+/* styling search bar */
 .nav-right input {
   background-color: rgb(18, 25, 62);
   width: 60%;
@@ -65,15 +72,20 @@ nav {
 
 .fa-bell {
   font-size: 1.5em;
-  /* line-height: ; */
 }
 
+/* giving gradient effect to logo */
 .gradient-text {
+  /* select gradient background */
   background-image: linear-gradient(45deg, red, orange);
+  /* making background big enough to cover logo/text */
   background-size: 100%;
+  /* clipping background */
   background-clip: text;
+  /* for chrome */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* for firefox */
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
@@ -82,44 +94,51 @@ nav {
   font-size: 3em;
 }
 
+/* adjusting profile picture */
 nav img {
   border-radius: 50%;
   display: block;
   height: 100%;
   width: auto;
-  /* margin: 10px 20px; */
 }
 
+/* container which will have main and aside section */
 .container {
   padding-bottom: 10vh;
   display: flex;
 }
 
+/* CREATINMG CAROUSEL  */
+/* carousel will be created using radio buttons and images as label selected images wil be moved to front  */
+/* hiding radio button */
 [type="radio"] {
   display: none;
 }
 
+/* making sure carousel is centered and giving it a proper height*/
+/* Avoid changes as it will waste a lot of time */
 #carousal {
   display: grid;
   place-items: center;
   perspective: 1000px;
   transform-style: preserve-3d;
-  /* border: 1px solid red;  */
   height: 50vh;
   width: 100%;
-  /* border: 1px solid red; */
 }
 
+/* image is inside Label */
 #carousal label {
   width: 60%;
+  /* avoiding overflow of image inside */
   overflow: hidden;
   position: absolute;
   cursor: pointer;
   transition: transform 0.4s ease;
-  /* border: 1px solid red; */
+  /* making sure there is no empty space in label due image being small */
   max-width: fit-content;
 }
 
+/* adjusting image to center of label */
 .carousal-image {
   display: flex;
   justify-content: center;
@@ -129,12 +148,15 @@ nav img {
   width: 65vh;
 }
 
+/* it should shrink when needed */
 .carousal-image img {
   flex-shrink: 1;
   min-width: 100%;
   min-height: 100%;
 }
 
+/* There are 3 images so 3 states of our carousel */
+/* if a slide/image is checked it should come forward */
 #s1:checked ~ #slide1,
 #s2:checked ~ #slide2,
 #s3:checked ~ #slide3 {
@@ -142,23 +164,81 @@ nav img {
   z-index: 1;
 }
 
+/* Right image of the selected image should move right and a little behind in 3d space */
 #s1:checked ~ #slide2,
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide1 {
   transform: translate3d(30%, 0, -100px);
 }
 
+/* Similarly, left image of selected image should move left and behind */
 #s1:checked ~ #slide3,
 #s2:checked ~ #slide1,
 #s3:checked ~ #slide2 {
   transform: translate3d(-30%, 0, -100px);
 }
 
+/* container have main section and Queue */
 .container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   margin: 0px 6%;
-  /* border: 1px solid red; */
+}
+
+/* Queue Text in aside section */
+/* Two spans are there in queue header on contains heading, another dropdown */
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+}
+
+/* Heading  */
+.queue-header > span:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Dropdown */
+.queue-header .dropdown {
+  color: rgb(66, 209, 74);
+}
+
+/* common class for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* common class for dropdown menus */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--accent);
+  line-height: 0.8rem;
+  padding: 0px 10px;
+  z-index: 1;
+}
+
+/* fitting content in dropdown menu so that there is no text wrap */
+.dropdown-menu p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+
+/* giving a little bit margin between icon and text inside dropdown menu */
+.dropdown-menu p i {
+  margin-right: 7px;
+}
+
+/* on hover show content width adjusted according to content*/
+.dropdown:hover .dropdown-menu {
+  display: block;
+  width: max-content;
 }
 
 .latest-releases {
@@ -167,140 +247,29 @@ nav img {
   align-items: center;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.song-card {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 40px;
-  width: fit-content;
-  height: 100px;
-  /* border: 1px solid red; */
-  max-width: 50%;
-}
-
-.song-card img {
-  display: inline;
-  margin: 0;
-}
-
-.song-info {
-  display: inline;
-  margin-left: 10px;
-}
-
-h3 {
-  width: 100%;
-  margin-left: 20px;
-}
-
-.round-border {
-  border-radius: 50%;
-}
-
-#popular-artists,
-#stations {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-#stations {
-  background-color: var(--accent);
-  margin: 20px auto;
-}
-
-#stations figure {
-  position: relative;
-  height: fit-content;
-}
-
-.position-element-center {
-  /* before using this class, please make sure parent's position is relative */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#genre {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.genre-image {
-  position: relative;
-  width: 100%;
-  flex-grow: 1;
-  max-width: 30%;
-  overflow: hidden;
-  /* border: 1px solid red; */
-  margin: 2px;
-  background-blend-mode: darken;
-}
-
-.genre-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.genre-image:hover img {
-  transform: scale(1.6);
-  transition: transform 0.5s ease-out;
-}
-
-.genre-image:hover .genre-text {
-  font-size: 1.6rem;
-  transition: font-size 0.5s ease-out;
-}
-
-.circular {
-  display: inline-block;
-  position: relative;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
-
-.circular img {
-  width: auto;
-  height: 100%;
-}
-
-.latest-song-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.latest-song {
-  flex-basis: 1;
-  width: 100px;
-  /* border: 1px solid red; */
-  margin: 10px;
-  flex-grow: 1;
-}
-
-.latest-song figure {
-  margin: 0px;
-}
-
-.play-hover-effect-container {
-  position: relative;
-}
-
+/* popping play button */
 .play-hover-effect-container > i {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 0px;
+}
+
+.song-card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 2fr;
+  margin: 40px;
+  width: fit-content;
+  height: 100px;
+  max-width: 50%;
+}
+
+.dot-menu {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .song-card:hover i,
@@ -318,16 +287,141 @@ h3 {
   background-color: var(--accent);
 }
 
+/*common class to make text centered can be used anywhere where horizontal margin is auto */
+.text-center {
+  text-align: center;
+}
+
+.song-card img {
+  display: inline;
+  margin: 0;
+}
+
+.song-info {
+  display: inline;
+  margin-left: 10px;
+}
+
+/* Titles of every section is h3 size */
+h3 {
+  width: 100%;
+  margin-left: 20px;
+}
+
+/* common class to make images round*/
+.round-border {
+  border-radius: 50%;
+}
+
+/* Popular artists section and stations have similar structure */
+#popular-artists,
+#stations {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+#stations {
+  background-color: var(--accent);
+  margin: 20px auto;
+}
+
+#stations figure {
+  position: relative;
+  height: fit-content;
+}
+
+/* Common class to center any div */
+.position-element-center {
+  /* before using this class, please make sure parent's position is relative */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#genre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* 3 images below stations */
+.genre-image {
+  position: relative;
+  /* letting them take as much space as possible. This will make them grow on larger screens */
+  flex-grow: 1;
+  /* keeping them in a single line coz they look ugly wrapped */
+  max-width: 30%;
+  overflow: hidden;
+  margin: 2px;
+  background-blend-mode: darken;
+}
+
+/* hover effect for image*/
+.genre-image:hover img {
+  transform: scale(1.6);
+  transition: transform 0.5s ease-out;
+}
+
+/* hover effect for text */
+.genre-image:hover .genre-text {
+  font-size: 1.6rem;
+  transition: font-size 0.5s ease-out;
+}
+
+/* common class to make images/div/text circular */
+.circular {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* if it has image center it  */
+.circular img {
+  width: auto;
+  height: 100%;
+}
+
+/* class for latest releases */
+.latest-song-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.latest-song {
+  flex-basis: 1;
+  width: 100px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.latest-song figure {
+  margin: 0px;
+}
+
+/* common class to give hover effect to elements that plays music */
+.play-hover-effect-container {
+  position: relative;
+}
+
+/* Queue */
 aside {
   display: flex;
   flex-direction: column;
 }
 
+/* container for queued songs */
 .queue-songs-list {
   display: flex;
   flex-direction: column;
 }
 
+/* individual song */
 .queue-song {
   display: flex;
   height: 100px;
@@ -338,6 +432,7 @@ aside {
   background-color: var(--accent);
 }
 
+/* placing heart icon at right most corner */
 .queue-song > span {
   font-size: 1.2rem;
   position: absolute;
@@ -346,16 +441,21 @@ aside {
   transform: translate(0%, -50%);
 }
 
+/* hover effect for song item*/
 .queue-song:hover {
   border: 1px solid white;
+  /* changing margin so that element does not look janky  */
+  /* this is achieved by subtracting border width from default margin. So, border width, below margin and default margin are linked and should be changed accordingly */
   margin: 1px 1px;
 }
 
+/* hover effect for heart icon */
 .queue-song > span:hover {
   color: red;
   cursor: pointer;
 }
 
+/* include song title and singer name */
 .queue-song-info {
   display: flex;
   flex-direction: column;
@@ -363,12 +463,15 @@ aside {
   padding: 10px;
 }
 
+/* making song name a little bold */
 .queue-song-info span:nth-child(1) {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 4px;
 }
 
+/* currently playing song info which is at the bottom*/
+/* It has 3 parts song-info, playe an player-controls */
 footer {
   position: fixed;
   bottom: 0;
@@ -420,13 +523,9 @@ footer {
   accent-color: #30cc7e;
 }
 
+/* for smaller screens sending Queue section to the bottom */
 @media screen and (max-width: 1300px) {
-  /* aside {
-    position: absolute;
-    opacity: 0;
-  } */
-
-  /* .container {
+  .container {
     grid-template-columns: 1fr;
-  } */
+  }
 }

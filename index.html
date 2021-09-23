@@ -65,6 +65,15 @@
               <h4>Stay</h4>
               <p>Aug 11, 2021</p>
             </div>
+            <div class="dot-menu dropdown">
+              <i class="fas fa-ellipsis-h"></i>
+              <div class="dropdown-menu">
+                <p><i class="fas fa-play"></i>Play Now</p>
+                <p><i class="fas fa-plus"></i>Add to queue</p>
+                <p><i class="fas fa-heart"></i>Add to Favourite</p>
+                <p><i class="fas fa-info-circle"></i>Get info</p>
+              </div>
+            </div>
           </div>
           <div class="song-card">
             <div class="play-hover-effect-container">
@@ -74,6 +83,15 @@
             <div class="song-info">
               <h4>Flames</h4>
               <p>Aug 21, 2021</p>
+            </div>
+            <div class="dot-menu dropdown">
+              <i class="fas fa-ellipsis-h"></i>
+              <div class="dropdown-menu">
+                <p><i class="fas fa-play"></i>Play Now</p>
+                <p><i class="fas fa-plus"></i>Add to queue</p>
+                <p><i class="fas fa-heart"></i>Add to Favourite</p>
+                <p><i class="fas fa-info-circle"></i>Get info</p>
+              </div>
             </div>
           </div>
           <div class="song-card">
@@ -85,6 +103,15 @@
               <h4>Summer Wave</h4>
               <p>Sep 11, 2020</p>
             </div>
+            <div class="dot-menu dropdown">
+              <i class="fas fa-ellipsis-h"></i>
+              <div class="dropdown-menu">
+                <p><i class="fas fa-play"></i>Play Now</p>
+                <p><i class="fas fa-plus"></i>Add to queue</p>
+                <p><i class="fas fa-heart"></i>Add to Favourite</p>
+                <p><i class="fas fa-info-circle"></i>Get info</p>
+              </div>
+            </div>
           </div>
           <div class="song-card">
             <div class="play-hover-effect-container">
@@ -95,54 +122,69 @@
               <h4>Noor</h4>
               <p>Apr 11, 2021</p>
             </div>
+            <div class="dot-menu dropdown">
+              <i class="fas fa-ellipsis-h"></i>
+              <div class="dropdown-menu">
+                <p><i class="fas fa-play"></i>Play Now</p>
+                <p><i class="fas fa-plus"></i>Add to queue</p>
+                <p><i class="fas fa-heart"></i>Add to Favourite</p>
+                <p><i class="fas fa-info-circle"></i>Get info</p>
+              </div>
+            </div>
           </div>
         </section>
         <section id="popular-artists">
           <h3>Popular Artists</h3>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/martin.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Martin Garrix</figcaption>
           </figure>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/ritviz.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Ritviz</figcaption>
           </figure>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/ariana.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Ariana Grande</figcaption>
           </figure>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/ed sheeran.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Ed Sheeran</figcaption>
           </figure>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/drake.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Drake</figcaption>
           </figure>
           <figure>
-            <a href="#single">
-              <div class="circular">
+            <a href="single-artist-screen.html">
+              <div class="circular play-hover-effect-container">
                 <img src="./images/bruno mars.jpg" alt="" width="100%" />
+                <i class="fas fa-play"></i>
               </div>
             </a>
             <figcaption class="text-center">Bruno Mars</figcaption>
@@ -190,15 +232,15 @@
         <section id="genre">
           <div class="genre-image">
             <img src="./images/party.jpg" width="100%" alt="" />
-            <span class="genre-text">Party</span>
+            <span class="position-element-center">Party</span>
           </div>
           <div class="genre-image">
             <img src="./images/electronic.jpg" width="100%" alt="" />
-            <span class="genre-text">Electronics</span>
+            <span class="position-element-center">Electronics</span>
           </div>
           <div class="genre-image">
             <img src="./images/road-trip.jpg" width="100%" alt="" />
-            <span class="genre-text">Road Trip</span>
+            <span class="position-element-center">Road Trip</span>
           </div>
         </section>
         <section class="latest-song-section">
@@ -297,7 +339,16 @@
         </section>
       </main>
       <aside>
-        <h3>Queue</h3>
+        <div class="queue-header">
+          <span>Queue</span>
+          <div class="dropdown">
+            <span>Queue <i class="fas fa-angle-down"></i></span>
+            <div class="dropdown-menu">
+              <p>Playlist</p>
+              <p>Favourite songs</p>
+            </div>
+          </div>
+        </div>
         <div class="queue-songs-list">
           <div class="queue-song">
             <img src="./images/summerwave.jpg" height="90%" alt="" />
