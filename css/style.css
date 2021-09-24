@@ -51,23 +51,43 @@ nav {
   width: 40%;
 }
 
+.search {
+  display: flex;
+  position: relative;
+  width: 50%;
+  font-size: 1rem;
+  background-color: #1f155e;
+  padding: 0.5rem;
+  align-items: center;
+  border-radius: 13px;
+}
+
+.search input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.search button {
+  position: absolute;
+  right: 5px;
+  width: fit-content;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  color: grey;
+  margin-right: 2px;
+}
+
 /* class to give horizontal margin */
 .mx-2 {
   margin: 0 1.5rem;
-}
-
-/* styling search bar */
-.nav-right input {
-  background-color: rgb(18, 25, 62);
-  width: 60%;
-  font-size: 1.1em;
-  border: none;
-  border-radius: 20px;
-  padding: 5px;
-  padding-left: 20px;
-  outline: none;
-  caret-color: azure;
-  color: azure;
 }
 
 .fa-bell {
@@ -161,6 +181,7 @@ nav img {
 #s2:checked ~ #slide2,
 #s3:checked ~ #slide3 {
   transform: translate3d(0%, 0, 0px);
+  -moz-transform: translate3d(0%, 0, 0px);
   z-index: 1;
 }
 
@@ -169,6 +190,7 @@ nav img {
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide1 {
   transform: translate3d(30%, 0, -100px);
+  -moz-transform: translate3d(30%, 0, -100px);
 }
 
 /* Similarly, left image of selected image should move left and behind */
@@ -176,6 +198,7 @@ nav img {
 #s2:checked ~ #slide1,
 #s3:checked ~ #slide2 {
   transform: translate3d(-30%, 0, -100px);
+  -moz-transform: translate3d(-30%, 0, -100px);
 }
 
 /* container have main section and Queue */
